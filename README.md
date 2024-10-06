@@ -22,6 +22,21 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
+## JSON Server for Order Management
+
+This project uses `json-server` to handle JSON files, including a file named `order.json` which stores order data. Every time a new order is added, it is necessary to restart the `json-server` to ensure that the changes are reflected properly.
+
+To restart the server:
+
+1. **Stop the current server** by pressing `CTRL+C` in the terminal.
+2. **Add the new order** through the application or by editing the `order.json` file manually.
+3. **Restart JSON Server** by running:
+   ```bash
+   json-server --watch users.json --port 3000
+   json-server --watch porducts.json --port 3100
+   json-server --watch order.json --port 3200
+   ```
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
